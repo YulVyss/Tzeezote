@@ -3,7 +3,7 @@
 @import "global/_global.scss";
 @import "global/_fonts.scss";
 
-// @import "../components/**/*.scss";
+$lightblue: #3a4574;
 
 body {
   position: relative;
@@ -48,7 +48,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
-  background: #3a4574;
+  background: $lightblue;
   transition: all 0.5s ease-out;
 
   &:hover {
@@ -69,6 +69,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+
   // .header__body
 
   &__body {
@@ -262,7 +263,7 @@ body {
   background: url("../img/bg_1.jpg") top / cover no-repeat;
 
   &__body {
-    padding: 261px 5px 260px;
+    padding: 261px 5px 268px;
     color: #ffffff;
   }
 
@@ -292,7 +293,7 @@ body {
   // .main__bottom
 
   &__bottom {
-    margin-top: 37px;
+    margin-top: 42px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -301,13 +302,7 @@ body {
   // .main__btn
 
   &__btn {
-    // padding: 38px 64px;
-    // font-style: normal;
-    // font-weight: 500;
-    // font-size: 18px;
-    // line-height: 24px;
-    // color: #ffffff;
-    // background: #3a4574;
+    padding: 38px 68px;
   }
 
   // .main__links
@@ -554,8 +549,6 @@ body {
       display: none;
     }
     &__dishes {
-      // flex-direction: column;
-
       & > * {
         margin-bottom: 7px;
       }
@@ -566,8 +559,9 @@ body {
 //============================================================
 //FEEDEBACK slider
 .feedback {
-  background: #3a4574;
-  padding: 220px 0 216px;
+  background: $lightblue;
+  padding: 220px 0 220px;
+
   // .feedback__slider
 
   &__slider {
@@ -614,7 +608,7 @@ body {
 
   &__text {
     width: 69%;
-    margin: 0 auto 25px;
+    margin: 0 auto 36px;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -643,8 +637,6 @@ body {
     top: 50%;
     width: 25px;
     height: 52px;
-    // width: calc(var(--swiper-navigation-size) / 44 * 27);
-    // height: var(--swiper-navigation-size);
     margin-top: calc(0px - (var(--swiper-navigation-size) / 2) - 10px);
     z-index: 10;
     cursor: pointer;
@@ -713,6 +705,254 @@ body {
     }
   }
   @media (max-width: 479.98px) {
+  }
+}
+
+//==================================================
+//ABOUT
+
+.about {
+  padding: 109px 0 48px;
+
+  // .about__body
+
+  &__body {
+  }
+
+  // .about__card-text
+
+  &__card-text {
+    padding: 0 40px 0 2px;
+  }
+
+  // .about__card
+
+  &__card {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+
+    // .about__card_1
+
+    &_1 {
+    }
+
+    // .about__card_2
+
+    &_2 {
+      flex-direction: row-reverse;
+      .about__card-text {
+        padding: 0 0 0 40px;
+      }
+    }
+
+    // .about__card_3
+
+    &_3 {
+    }
+  }
+
+  // .about__card-title
+
+  &__card-title {
+    position: relative;
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 220%;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: -50px;
+      height: 2px;
+      width: 108px;
+      background-color: #d3b47f;
+    }
+  }
+
+  // .about__card-description
+
+  &__card-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+    color: #808080;
+  }
+
+  // .about__card-img
+
+  &__card-img {
+    flex: 0 0 57%;
+    overflow: hidden;
+    max-height: 560px;
+    img {
+      min-width: 100%;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    &__card {
+      flex-direction: column;
+    }
+    &__card-text {
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    &__card_2 {
+      .about__card-text {
+        padding: 0;
+      }
+    }
+    &__card-title {
+      padding: 0 0 0 60px;
+      &::before {
+        left: 0;
+      }
+    }
+    &__card-img {
+      width: 100%;
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    padding: 50px 0 40px;
+    &__card-title {
+      font-size: 28px;
+      padding: 0;
+    }
+
+    &__card-description {
+      font-size: 14px;
+    }
+  }
+}
+
+//============================================================
+//PHOTOS
+.photos {
+  padding: 72px 0 0;
+  background: linear-gradient(to bottom, $lightblue 67%, #ffffff 33%);
+  color: #ffffff;
+
+  // .photos__body
+
+  &__body {
+    position: relative;
+  }
+
+  &__text {
+    max-width: 50%;
+  }
+
+  // .photos__title
+
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 162%;
+  }
+
+  // .photos__text
+
+  &__description {
+    margin-bottom: 50px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+  }
+
+  // .photos__slider
+
+  &__slider {
+    padding: 0 100px;
+  }
+
+  // .photos__slide
+
+  &__slide {
+    overflow: hidden;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  &__button-next,
+  &__button-prev {
+    background: url("../img/arrow_l.svg") center / contain no-repeat;
+    position: absolute;
+    top: 50px;
+    width: 25px;
+    height: 52px;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.swiper-button-disabled {
+      background: url("../img/arrow_l_gold.svg") center / contain no-repeat;
+    }
+  }
+
+  &__button-next {
+    transform: rotate(-180deg);
+    right: 25px;
+    left: auto;
+  }
+  &__button-prev {
+    right: 125px;
+  }
+
+  @media (max-width: 991.98px) {
+    &__text {
+      max-width: 75%;
+    }
+    &__slide {
+      max-height: 450px;
+    }
+    &__title {
+      font-size: 36px;
+    }
+
+    // .photos__text
+
+    &__description {
+      margin-bottom: 30px;
+      font-size: 14px;
+      line-height: 160%;
+    }
+  }
+  @media (max-width: 767.98px) {
+    padding: 50px 0 0;
+    &__slider {
+      padding: 0;
+      position: relative;
+    }
+    &__button-next,
+    &__button-prev {
+      top: -50px;
+      width: 17px;
+      height: 33px;
+    }
+    &__text {
+      width: 100%;
+      max-width: 100%;
+    }
+    &__description {
+      margin-bottom: 60px;
+    }
+    &__slide {
+      max-height: 300px;
+    }
   }
 }
 

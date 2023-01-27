@@ -47,6 +47,35 @@ const swiper1 = new Swiper('.feedback__slider', {
   spaceBetween: 400,
 });
 
+//second
+
+const swiper2 = new Swiper('.photos__slider', {
+  // Optional parameters
+  init: true,
+  loop: false,
+  spaceBetween: 30,
+  grabCursor: true,
+  navigation: {
+    nextEl: ".photos__button-next",
+    prevEl: ".photos__button-prev",
+  },
+  fadeEffect: {
+    crossFade: true
+  },
+  // breakpoints: {
+  //   // when window width is >= 320px
+  //   480: {
+  //     slidesPerView: 1,
+  //   },
+  //   767.98: {
+  //     slidesPerView: 1,
+  //   },
+  //   991.98: {
+  //     slidesPerView: 1,
+  //   },
+  // }
+});
+
 //================================================
 // send form
 
