@@ -62,42 +62,33 @@ const swiper2 = new Swiper('.photos__slider', {
   fadeEffect: {
     crossFade: true
   },
-  // breakpoints: {
-  //   // when window width is >= 320px
-  //   480: {
-  //     slidesPerView: 1,
-  //   },
-  //   767.98: {
-  //     slidesPerView: 1,
-  //   },
-  //   991.98: {
-  //     slidesPerView: 1,
-  //   },
-  // }
+
 });
 
 //================================================
 // send form
+let data = {}
 
 modalForm.onsubmit = async (e) => {
   e.preventDefault();
-  let data = {}
   data.user_name = document.getElementById('name').value
   data.email = document.getElementById('email').value
   data.request = document.getElementById('request').value
   data = JSON.stringify(data)
-
   console.log(data)
-  // fetchSend(data)
+  fetchSend(data)
 
-  let response = await fetch('/php/index.php', {
-    method: 'POST',
-    body: data
-  });
+};
 
-  let result = await response.json();
 
-  console.log(result);
+footerForm.onsubmit = async (e) => {
+  e.preventDefault();
+  data.user_name = document.getElementById('name2').value
+  data.email = document.getElementById('email2').value
+  data.request = document.getElementById('request2').value
+  data = JSON.stringify(data)
+  console.log(data)
+  fetchSend(data)
 };
 
 const fetchSend = (formData) => {
@@ -107,7 +98,9 @@ const fetchSend = (formData) => {
       .then(response => alert('Сообщение отправлено'))
       .catch(error => console.error(error))
   })
+
 }
+
 
 
 
