@@ -6,10 +6,12 @@ document.querySelector('body').addEventListener('click', (ev) => {
   if (ev.target.classList.contains('menu-icon')) {
     ev.target.classList.toggle('active')
     document.querySelector('.header__nav').classList.toggle('open')
+    document.querySelector('.header__logo').classList.toggle('open')
   }
   if (ev.target.classList.contains('menu-icon__item')) {
     ev.target.parentNode.classList.toggle('active')
     document.querySelector('.header__nav').classList.toggle('open')
+    document.querySelector('.header__logo').classList.toggle('open')
   }
   if (ev.target.classList.contains('header__nav-link')) {
     document.querySelector('.header__nav').classList.remove('open')

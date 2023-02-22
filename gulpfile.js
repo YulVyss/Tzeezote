@@ -17,7 +17,7 @@ exports.svg_sprite = tasks.svg_sprite;
 exports.ttf = tasks.ttf;
 exports.ttf2 = tasks.ttf2;
 exports.bs_html = tasks.bs_html;
-exports.bs_php = tasks.bs_php;
+// exports.bs_php = tasks.bs_php;
 exports.watch = tasks.watch;
 exports.deploy = tasks.deploy;
 
@@ -50,6 +50,6 @@ exports.dev_php = gulp.parallel(
   exports.webp,
   exports.svg_sprite,
   exports.php,
-  exports.bs_php,
+  // exports.bs_php,
   exports.watch
 )
